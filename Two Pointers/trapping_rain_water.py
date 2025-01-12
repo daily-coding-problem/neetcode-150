@@ -6,6 +6,9 @@ from typing import List
 def trap(heights: List[int]) -> int:
     n = len(heights)
 
+    if n == 0:
+        return 0
+
     result = 0
 
     left = 0
