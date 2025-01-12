@@ -37,3 +37,18 @@ python -m unittest discover -s . -p "*.py"
 - `-s`: Specifies the start directory for discovery (`.` means the current directory)
 - `-p`: Specifies the pattern of Python files to search for tests (in this case `*.py` meaning all `.py` files)
 
+## _Why Python for Coding Interviews?_
+
+Python is often recommended for coding interviews due to several compelling reasons:
+
+-  **Readability**: Python is a high-level language known for its clear and concise syntax, making it easy to read and write. This can be especially helpful during interviews where you need to quickly convey your thought process.
+
+-  **Simplicity**: With its straightforward syntax, Python allows you to focus on solving problems rather than getting bogged down by complex language rules. This simplicity can help you implement solutions more efficiently during an interview.
+
+-  **Extensive Libraries**: Python boasts a vast ecosystem of libraries and frameworks, such as NumPy and pandas, which can be leveraged to solve complex problems more easily. This can be a significant advantage when tackling algorithmic challenges.
+
+-  **Strong Community Support**: Python has a large and active community of developers. This means there are plenty of resources, tutorials, and forums available to help you learn and troubleshoot any issues you might face.
+
+These attributes make Python a preferred choice for many candidates preparing for coding interviews.
+To learn more about Python and its applications in coding interviews,
+check out the _Python for Coding Interviews_ course on [NeetCode](https://neetcode.io/courses) where you will learn effective Python for coding interviews.
