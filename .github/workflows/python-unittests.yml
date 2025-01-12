@@ -1,4 +1,4 @@
-name: Python Unit Test
+name: Python Unit Tests
 
 on:
     push:
@@ -21,5 +21,5 @@ jobs:
               with:
                   python-version: '3.x'
 
-            - name: Run unittest
+            - name: Run Unit Tests
               run: python -m unittest discover -s . -p "*.py"
