@@ -3,24 +3,24 @@
 import unittest
 from typing import List
 
-def encode(strs: List[str]) -> str:
+def encode(words: List[str]) -> str:
     encoded_words = []
 
-    for word in strs:
+    for word in words:
         encoded_word = str(len(word)) + "#" + word
         encoded_words.append(encoded_word)
 
     return ' '.join(encoded_words)
 
-def decode(s: str) -> List[str]:
-    n = len(s)
+def decode(encoded_words: str) -> List[str]:
+    n = len(encoded_words)
     decoded_words = []
     i = 0
 
     while i < n:
         j = i
         # Find the position of the next '#'
-        while j < n and s[j] != '#':
+        while j < n and encoded_words[j] != '#':
             j += 1
 
         # If no '#' is found, break the loop to avoid infinite loop
@@ -29,9 +29,9 @@ def decode(s: str) -> List[str]:
 
         # Try to convert the substring to an integer
         try:
-            length = int(s[i:j])
+            length = int(encoded_words[i:j])
         except ValueError:
-            raise ValueError(f"Invalid length found: {s[i:j]}")
+            raise ValueError(f"Invalid length found: {encoded_words[i:j]}")
 
         # Move i to the start of the actual word
         i = j + 1
@@ -39,9 +39,9 @@ def decode(s: str) -> List[str]:
 
         # Check if the end of the word is within bounds
         if j > n:
-            raise ValueError(f"Word length {length} is out of bounds for the string: {s[i:]}")
+            raise ValueError(f"Word length {length} is out of bounds for the string: {encoded_words[i:]}")
 
-        decoded_word = s[i:j]
+        decoded_word = encoded_words[i:j]
         decoded_words.append(decoded_word)
 
         # Move i to the start of the next length

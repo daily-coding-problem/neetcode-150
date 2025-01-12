@@ -2,22 +2,22 @@
 
 import unittest
 
-def is_anagram(s: str, t: str) -> bool:
-    n = len(s)
-    m = len(t)
+def is_anagram(word_one: str, word_two: str) -> bool:
+    n = len(word_one)
+    m = len(word_two)
 
     if n != m:
         return False
 
     seen = {}
 
-    for char in s:
+    for char in word_one:
         if char in seen:
             seen[char] += 1
         else:
             seen[char] = 1
 
-    for char in t:
+    for char in word_two:
         if char in seen:
             seen[char] -= 1
         else:
