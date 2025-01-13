@@ -21,7 +21,8 @@ def min_window(s: str, t: str) -> str:
     char_count_needed = m
 
     # Initialize window pointers and other variables
-    left, right = 0, 0
+    left = 0
+    right = 0
     matched_characters = 0
     window_counts = defaultdict(int)
     window = ''
