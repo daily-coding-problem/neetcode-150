@@ -41,7 +41,7 @@ def min_window(s: str, t: str) -> str:
 
             # Save the smallest window until now
             if right - left + 1 < result[0]:
-                result = (right - left + 1, left, right)
+                result = (right - left + 1), left, right
 
             # The character at the position by the 'left' pointer is no longer a part of the window
             window_counts[char] -= 1
