@@ -20,7 +20,7 @@ def min_window(s: str, t: str) -> str:
     t_counts = Counter(t)
     char_count_needed = m
 
-    # Initialize window pointers and other variables
+    # Initialize window related variables
     left = 0
     matched_characters = 0
     window_counts = defaultdict(int)
