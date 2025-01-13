@@ -14,7 +14,7 @@ def min_window(s: str, t: str) -> str:
     if m > n:
         return ''
 
-    result = float('inf'), None, None # (window length, left, right)
+    result = float('inf'), None, None # (minimum window length, left, right)
 
     # Count characters in t
     t_counts = Counter(t)
@@ -40,8 +40,10 @@ def min_window(s: str, t: str) -> str:
             char = s[left]
 
             # Save the smallest window until now
-            if right - left + 1 < result[0]:
-                result = (right - left + 1), left, right
+            min_window_length = result[0]
+            current_window_length = right - left + 1
+            if current_window_length < min_window_length:
+                result = current_window_length, left, right
 
             # The character at the position by the 'left' pointer is no longer a part of the window
             window_counts[char] -= 1
@@ -52,9 +54,9 @@ def min_window(s: str, t: str) -> str:
             # Move the left pointer forward
             left += 1
 
-    window_length = result[0]
+    min_window_length = result[0]
 
-    if window_length == float('inf'):
+    if min_window_length == float('inf'):
         return ''
 
     # Build the result
