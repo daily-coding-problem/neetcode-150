@@ -27,7 +27,7 @@ def min_window(s: str, t: str) -> str:
     window_counts = defaultdict(int)
     window = ''
 
-    while right < n:
+    for right in range(n):
         # Add one character from the right to the window
         char = s[right]
         window_counts[char] += 1
@@ -53,9 +53,6 @@ def min_window(s: str, t: str) -> str:
 
             # Move the left pointer forward
             left += 1
-
-        # Expand the window
-        right += 1
 
     if result[0] == float('inf'):
         return ''
