@@ -36,7 +36,7 @@ def min_window(s: str, t: str) -> str:
             matched_characters += 1
 
         # Try to shrink the window until it ceases to be 'desirable'
-        while left <= right and matched_characters == char_count_needed:
+        while matched_characters == char_count_needed:
             char = s[left]
 
             # Save the smallest window until now
