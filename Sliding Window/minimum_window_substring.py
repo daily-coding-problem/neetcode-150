@@ -26,9 +26,8 @@ def min_window(s: str, t: str) -> str:
     window_counts = defaultdict(int)
     window = ''
 
-    for right in range(n):
+    for right, char in enumerate(s):
         # Add one character from the right to the window
-        char = s[right]
         window_counts[char] += 1
         window += char
 
