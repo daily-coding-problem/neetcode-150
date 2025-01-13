@@ -52,7 +52,9 @@ def min_window(s: str, t: str) -> str:
             # Move the left pointer forward
             left += 1
 
-    if result[0] == float('inf'):
+    window_length = result[0]
+
+    if window_length == float('inf'):
         return ''
 
     # Build the result
