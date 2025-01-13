@@ -46,8 +46,11 @@ def min_window(s: str, t: str) -> str:
                 result = current_window_length, left, right
 
             # The character at the position by the 'left' pointer is no longer a part of the window
+            # Therefore, shrink the window
             window_counts[char] -= 1
             window = remove_leftmost_occurrence(window, char)
+
+            # If we are not in a 'desirable' state, decrement 'matched_characters'
             if char in t_counts and window_counts[char] < t_counts[char]:
                 matched_characters -= 1
 
