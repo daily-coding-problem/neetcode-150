@@ -33,7 +33,7 @@ def check_inclusion(s1: str, s2: str) -> bool:
         # Delete the leftmost character from 'window_count' if
         # its frequency reaches 0
         if window_count[s2[left]] == 0:
-            del  window_count[s2[left]]
+            del window_count[s2[left]]
 
         # Check if the current window matches 's1_count'
         if window_count == s1_count:
