@@ -70,7 +70,7 @@ def min_window(s: str, t: str) -> str:
     return s[left:right + 1]
 
 def remove_leftmost_occurrence(s, char):
-    # Find the position of the leftmost occurrence of the character
+    # Find the position of the leftmost occurrence
     index = s.find(char)
 
     # If the character is found, remove it using slicing
