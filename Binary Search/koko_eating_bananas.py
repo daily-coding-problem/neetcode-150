@@ -1,4 +1,5 @@
 # https://neetcode.io/problems/eating-bananas
+
 import math
 import unittest
 from typing import List
@@ -8,7 +9,7 @@ def min_eating_speed(piles: List[int], hours: int) -> int:
 
     left =  1
     right = max(piles)
-    
+
     result = right
 
     while left <= right:
