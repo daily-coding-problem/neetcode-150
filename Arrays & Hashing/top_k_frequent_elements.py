@@ -5,6 +5,15 @@ import heapq
 from typing import List
 from collections import Counter
 
+# The nlargest function allows you to find the k largest elements
+# from an iterable based on a specified key function.
+#
+# def top_k_frequent(nums: List[int], k: int) -> List[int]:
+#     counts = Counter(nums)
+#
+#     # Use heapq.nlargest to get the k elements with the highest counts
+#     return heapq.nlargest(k, counts.keys(), key=counts.get)
+
 def top_k_frequent(nums: List[int], k: int) -> List[int]:
     n = len(nums)
 
