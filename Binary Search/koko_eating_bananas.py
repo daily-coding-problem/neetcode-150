@@ -8,9 +8,10 @@ def min_eating_speed(piles: List[int], hours: int) -> int:
 
     left =  1
     right = max(piles)
+    
     result = right
 
-    while left < right:
+    while left <= right:
         k = (left + right) // 2
 
         total_time = 0
