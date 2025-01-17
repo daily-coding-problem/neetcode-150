@@ -3,6 +3,7 @@
 import unittest
 from collections import Counter
 
+
 def check_inclusion(s1: str, s2: str) -> bool:
     n = len(s1)
     m = len(s2)
@@ -21,7 +22,7 @@ def check_inclusion(s1: str, s2: str) -> bool:
     if window_count == s1_count:
         return True
 
-    for right in range(n, m): # Fixed window size of m - n
+    for right in range(n, m):  # Fixed window size of m - n
         left = right - n
 
         # Add new character to the window
@@ -40,6 +41,7 @@ def check_inclusion(s1: str, s2: str) -> bool:
             return True
 
     return False
+
 
 class Test(unittest.TestCase):
     def test_check_inclusion(self):

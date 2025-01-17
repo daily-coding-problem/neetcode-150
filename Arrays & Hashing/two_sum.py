@@ -4,6 +4,7 @@ import unittest
 from typing import List
 from collections import defaultdict
 
+
 def two_sum(nums: List[int], target) -> List[int]:
     complements = defaultdict(int)
 
@@ -11,13 +12,12 @@ def two_sum(nums: List[int], target) -> List[int]:
         complement = target - num
 
         if complement in complements:
-            return [
-                complements[complement], i
-            ]
+            return [complements[complement], i]
 
         complements[num] = i
 
     return []
+
 
 class Test(unittest.TestCase):
     def test_two_sum(self):

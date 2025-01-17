@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def two_sum_II(nums: List[int], target: int) -> List[int]:
     n = len(nums)
 
@@ -24,11 +25,10 @@ def two_sum_II(nums: List[int], target: int) -> List[int]:
 
         # Assume current sum = target
 
-        return [
-            left + 1, right + 1
-        ]
+        return [left + 1, right + 1]
 
     return result
+
 
 class Test(unittest.TestCase):
     def test_two_sum_II(self):

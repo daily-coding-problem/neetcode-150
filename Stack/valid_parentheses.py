@@ -2,8 +2,9 @@
 
 import unittest
 
+
 def is_valid(s: str) -> bool:
-    closing = {')': '(', ']': '[', '}': '{'}
+    closing = {")": "(", "]": "[", "}": "{"}
     stack = []
 
     for char in s:
@@ -20,9 +21,10 @@ def is_valid(s: str) -> bool:
 
     return len(stack) == 0
 
+
 class Test(unittest.TestCase):
     def test_is_valid(self):
-        self.assertTrue(is_valid('[]'))
-        self.assertTrue(is_valid('([{}])'))
-        self.assertFalse(is_valid('[(])'))
-        self.assertFalse(is_valid(']'))
+        self.assertTrue(is_valid("[]"))
+        self.assertTrue(is_valid("([{}])"))
+        self.assertFalse(is_valid("[(])"))
+        self.assertFalse(is_valid("]"))

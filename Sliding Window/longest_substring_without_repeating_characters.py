@@ -2,6 +2,7 @@
 
 import unittest
 
+
 def length_of_longest_substring(s: str) -> int:
     seen = set()
     left = 0
@@ -12,8 +13,8 @@ def length_of_longest_substring(s: str) -> int:
         # the left pointer forward whenever a duplicate is encountered
 
         while char in seen:
-            seen.remove(s[left]) # Remove the leftmost character
-            left += 1 # Shrink the window until the duplicate is removed
+            seen.remove(s[left])  # Remove the leftmost character
+            left += 1  # Shrink the window until the duplicate is removed
             continue
 
         seen.add(char)
@@ -22,6 +23,7 @@ def length_of_longest_substring(s: str) -> int:
         result = max(result, right - left + 1)
 
     return result
+
 
 class Test(unittest.TestCase):
     def test_length_of_longest_substring(self):

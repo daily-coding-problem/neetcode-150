@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def max_area(heights: List[int]) -> int:
     n = len(heights)
 
@@ -24,6 +25,7 @@ def max_area(heights: List[int]) -> int:
             right -= 1
 
     return result
+
 
 class Test(unittest.TestCase):
     def test_max_area(self):

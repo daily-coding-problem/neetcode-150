@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def trap(heights: List[int]) -> int:
     n = len(heights)
 
@@ -30,6 +31,7 @@ def trap(heights: List[int]) -> int:
         result += max_right_height - heights[right]
 
     return result
+
 
 class Test(unittest.TestCase):
     def test_trap(self):

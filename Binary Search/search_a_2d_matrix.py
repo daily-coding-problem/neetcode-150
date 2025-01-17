@@ -19,6 +19,7 @@ from typing import List
 #     # Check if the target is actually at the found index
 #     return index < len(flat_list) and flat_list[index] == target
 
+
 def search_matrix(matrix: List[List[int]], target: int) -> bool:
     n = len(matrix)
     m = len(matrix[0])
@@ -45,7 +46,12 @@ def search_matrix(matrix: List[List[int]], target: int) -> bool:
 
     return False
 
+
 class Test(unittest.TestCase):
     def test_search_matrix(self):
-        self.assertTrue(search_matrix([[1, 2, 4, 8],[10, 11, 12, 13],[14, 20, 30, 40]], 10))
-        self.assertFalse(search_matrix([[1, 2, 4, 8],[10, 11, 12, 13],[14, 20, 30, 40]], 15))
+        self.assertTrue(
+            search_matrix([[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 10)
+        )
+        self.assertFalse(
+            search_matrix([[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]], 15)
+        )

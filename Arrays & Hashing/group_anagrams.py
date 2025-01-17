@@ -4,11 +4,12 @@ import unittest
 from typing import List
 from collections import defaultdict
 
+
 def group_anagrams(words: List[str]) -> List[List[str]]:
     anagram_groups = defaultdict(list)
 
     for word in words:
-        sorted_word = ''.join(sorted(word))
+        sorted_word = "".join(sorted(word))
 
         if sorted_word in anagram_groups:
             anagram_groups[sorted_word].append(word)
@@ -17,6 +18,7 @@ def group_anagrams(words: List[str]) -> List[List[str]]:
         anagram_groups[sorted_word].append(word)
 
     return [group for group in anagram_groups.values()]
+
 
 class Test(unittest.TestCase):
     def assertEqualAnagramGroups(self, result, expected):
@@ -30,7 +32,7 @@ class Test(unittest.TestCase):
     def test_group_anagrams(self):
         self.assertEqualAnagramGroups(
             group_anagrams(["act", "pots", "tops", "cat", "stop", "hat"]),
-            [["hat"], ["act", "cat"], ["stop", "pots", "tops"]]
+            [["hat"], ["act", "cat"], ["stop", "pots", "tops"]],
         )
         self.assertEqualAnagramGroups(group_anagrams(["x"]), [["x"]])
         self.assertEqualAnagramGroups(group_anagrams([""]), [[""]])

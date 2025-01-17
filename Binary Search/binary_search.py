@@ -20,6 +20,7 @@ from typing import List
 #     # If target is not present, return -1
 #     return -1
 
+
 def binary_search(nums: List[int], target: int) -> int:
     n = len(nums)
 
@@ -38,6 +39,7 @@ def binary_search(nums: List[int], target: int) -> int:
             right = mid - 1
 
     return -1
+
 
 class Test(unittest.TestCase):
     def test_binary_search(self):

@@ -4,11 +4,14 @@ import unittest
 
 from collections import defaultdict
 
+
 def character_replacement(s: str, k: int) -> int:
     counts = defaultdict(int)
 
     left = 0
-    max_frequency = 0 # Track the frequency of the most frequent character in the current window
+    max_frequency = (
+        0  # Track the frequency of the most frequent character in the current window
+    )
     result = 0
 
     for right, char in enumerate(s):
@@ -27,6 +30,7 @@ def character_replacement(s: str, k: int) -> int:
         result = max(result, right - left + 1)
 
     return result
+
 
 class Test(unittest.TestCase):
     def test_character_replacement(self):

@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def largest_rectangle_area(heights: List[int]) -> int:
     num_bars = len(heights)
     stack = []  # This stack will store tuples of (start_index, bar_height)
@@ -30,6 +31,7 @@ def largest_rectangle_area(heights: List[int]) -> int:
         max_area = max(max_area, bar_height * (num_bars - start_index))
 
     return max_area
+
 
 class Test(unittest.TestCase):
     def test_largest_rectangle_area(self):

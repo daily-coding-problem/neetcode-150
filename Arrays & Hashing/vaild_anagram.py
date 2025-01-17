@@ -2,6 +2,7 @@
 
 import unittest
 
+
 def is_anagram(word_one: str, word_two: str) -> bool:
     n = len(word_one)
     m = len(word_two)
@@ -28,6 +29,7 @@ def is_anagram(word_one: str, word_two: str) -> bool:
             return False
 
     return True
+
 
 class Test(unittest.TestCase):
     def test_is_anagram(self):

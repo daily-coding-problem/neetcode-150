@@ -3,15 +3,17 @@
 import unittest
 from typing import List
 
+
 def max_profit(prices: List[int]) -> int:
     result = 0
-    min_price = float('inf')
+    min_price = float("inf")
 
     for price in prices:
         min_price = min(min_price, price)
         result = max(result, price - min_price)
 
     return result
+
 
 class Test(unittest.TestCase):
     def test_max_profit(self):

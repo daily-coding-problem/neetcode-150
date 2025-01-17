@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def product_except_self(nums: List[int]) -> List[int]:
     n = len(nums)
 
@@ -19,6 +20,7 @@ def product_except_self(nums: List[int]) -> List[int]:
         postfix *= nums[i]
 
     return result
+
 
 class Test(unittest.TestCase):
     def test_product_except_self(self):

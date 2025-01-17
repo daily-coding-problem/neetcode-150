@@ -4,10 +4,11 @@ import math
 import unittest
 from typing import List
 
+
 def min_eating_speed(piles: List[int], hours: int) -> int:
     piles.sort()
 
-    left =  1
+    left = 1
     right = max(piles)
 
     result = right
@@ -26,6 +27,7 @@ def min_eating_speed(piles: List[int], hours: int) -> int:
             left = k + 1
 
     return result
+
 
 class Test(unittest.TestCase):
     def test_min_eating_speed(self):

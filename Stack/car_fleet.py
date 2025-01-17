@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def car_fleet(target: int, positions: List[int], speeds: List[int]) -> int:
     # Create a list of tuples where each tuple contains a car's position and speed.
     cars = [(position, speed) for position, speed in zip(positions, speeds)]
@@ -31,6 +32,7 @@ def car_fleet(target: int, positions: List[int], speeds: List[int]) -> int:
 
     # The number of distinct times in the stack represents the number of car fleets.
     return len(stack)
+
 
 class Test(unittest.TestCase):
     def test_car_fleet(self):

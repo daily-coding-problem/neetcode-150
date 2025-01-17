@@ -2,6 +2,7 @@
 
 import unittest
 
+
 class MinStack:
     def __init__(self):
         self.stack = []
@@ -25,6 +26,7 @@ class MinStack:
 
     def get_min(self) -> int:
         return self.min_stack[-1] if self.min_stack else None
+
 
 class TestMinStack(unittest.TestCase):
     def setUp(self):
@@ -93,4 +95,3 @@ class TestMinStack(unittest.TestCase):
 
         self.min_stack.push(1)
         self.assertEqual(self.min_stack.get_min(), 1)
-

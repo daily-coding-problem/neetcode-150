@@ -14,6 +14,7 @@ from collections import Counter
 #     # Use heapq.nlargest to get the k elements with the highest counts
 #     return heapq.nlargest(k, counts.keys(), key=counts.get)
 
+
 def top_k_frequent(nums: List[int], k: int) -> List[int]:
     n = len(nums)
 
@@ -25,7 +26,9 @@ def top_k_frequent(nums: List[int], k: int) -> List[int]:
     min_heap = []
 
     for num, count in counts.items():
-        heapq.heappush(min_heap, (-count, num)) # negate the count to convert min heap to max heap
+        heapq.heappush(
+            min_heap, (-count, num)
+        )  # negate the count to convert min heap to max heap
 
     result = []
 
@@ -34,6 +37,7 @@ def top_k_frequent(nums: List[int], k: int) -> List[int]:
         result.append(num)
 
     return result
+
 
 class Test(unittest.TestCase):
     def test_top_k_frequent(self):

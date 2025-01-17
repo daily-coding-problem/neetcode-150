@@ -3,12 +3,13 @@
 import unittest
 from typing import List
 
+
 def longest_consecutive(nums: List[int]) -> int:
     nums_set = set(nums)
     longest = 0
 
     for num in nums_set:
-        if (num - 1) not in nums_set: # Are we are the start of a sequence?
+        if (num - 1) not in nums_set:  # Are we are the start of a sequence?
             length = 1
 
             while (num + length) in nums_set:
@@ -17,6 +18,7 @@ def longest_consecutive(nums: List[int]) -> int:
             longest = max(longest, length)
 
     return longest
+
 
 class Test(unittest.TestCase):
     def test_longest_consecutive(self):

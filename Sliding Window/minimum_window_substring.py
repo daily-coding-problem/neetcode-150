@@ -6,15 +6,15 @@ from collections import Counter, defaultdict
 
 def min_window(s: str, t: str) -> str:
     if not t or not s:
-        return ''
+        return ""
 
     n = len(s)
     m = len(t)
 
     if m > n:
-        return ''
+        return ""
 
-    result = float('inf'), None, None # (minimum window length, left, right)
+    result = float("inf"), None, None  # (minimum window length, left, right)
 
     # Count characters in t
     t_counts = Counter(t)
@@ -24,7 +24,7 @@ def min_window(s: str, t: str) -> str:
     left = 0
     matched_characters = 0
     window_counts = defaultdict(int)
-    window = ''
+    window = ""
 
     for right, char in enumerate(s):
         # Add one character from the right to the window
@@ -59,15 +59,16 @@ def min_window(s: str, t: str) -> str:
 
     min_window_length = result[0]
 
-    if min_window_length == float('inf'):
-        return ''
+    if min_window_length == float("inf"):
+        return ""
 
     # Build the result
 
     left = result[1]
     right = result[2]
 
-    return s[left:right + 1]
+    return s[left : right + 1]
+
 
 def remove_leftmost_occurrence(s, char):
     # Find the position of the leftmost occurrence
@@ -76,10 +77,11 @@ def remove_leftmost_occurrence(s, char):
     # If the character is found, remove it using slicing
     if index != -1:
         # Return the string without the leftmost occurrence of the character
-        return s[:index] + s[index + 1:]
+        return s[:index] + s[index + 1 :]
 
     # If the character is not found, return the string unchanged
     return s
+
 
 class Test(unittest.TestCase):
     def test_min_window(self):
