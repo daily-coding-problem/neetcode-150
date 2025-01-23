@@ -9,15 +9,16 @@ def group_anagrams(words: List[str]) -> List[List[str]]:
     anagram_groups = defaultdict(list)
 
     for word in words:
-        sorted_word = "".join(sorted(word))
+        # Create a character frequency tuple
+        char_count = [0] * 26  # Assuming only lowercase letters
+        for char in word:
+            char_count[ord(char) - ord("a")] += 1
 
-        if sorted_word in anagram_groups:
-            anagram_groups[sorted_word].append(word)
-            continue
+        # Use the tuple of counts as the key
+        key = tuple(char_count)
+        anagram_groups[key].append(word)
 
-        anagram_groups[sorted_word].append(word)
-
-    return [group for group in anagram_groups.values()]
+    return list(anagram_groups.values())
 
 
 class Test(unittest.TestCase):
