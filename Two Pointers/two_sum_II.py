@@ -7,6 +7,7 @@ from typing import List
 # If the array was not sorted, we would have to sort it first, and
 # incur a O(n log n) time complexity.
 
+
 def two_sum_II(nums: List[int], target: int) -> List[int]:
     n = len(nums)
 
