@@ -1,5 +1,7 @@
 # https://neetcode.io/problems/is-palindrome
 
+import unittest
+
 # `isalnum()` method returns True if all the characters are alphanumeric, meaning alphabet letter (a-z) and numbers (0-9).
 # `isalpha()` method returns True if all the characters are alphabet letters (a-z).
 # `isdigit()` method returns True if all the characters are digits (0-9).
@@ -14,8 +16,6 @@
 #          ord('a') <= ord(character) <= ord('z') or
 #          ord('0') <= ord(character) <= ord('9')
 #    )
-
-import unittest
 
 
 def is_palindrome(sentence: str) -> bool:
