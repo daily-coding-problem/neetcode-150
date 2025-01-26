@@ -15,7 +15,7 @@ def two_sum_II(nums: List[int], target: int) -> List[int]:
 
     result = []
 
-    while left <= right:
+    while left < right:
         current_sum = nums[left] + nums[right]
 
         if current_sum < target:
