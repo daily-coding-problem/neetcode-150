@@ -47,7 +47,7 @@ def find_median_sorted_arrays(nums1: List[int], nums2: List[int]) -> float:
             left = i + 1
 
 
-class TestFindMedianSortedArrays(unittest.TestCase):
+class Test(unittest.TestCase):
     def test_basic_case(self):
         nums1 = [1, 3]
         nums2 = [2]
