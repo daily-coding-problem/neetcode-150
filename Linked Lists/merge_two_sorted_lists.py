@@ -38,7 +38,7 @@ class Test(unittest.TestCase):
         list1 = ListNode(1, ListNode(2, ListNode(4)))
         list2 = ListNode(1, ListNode(3, ListNode(4)))
 
-        result = merge_two_lists(None, list1, list2)
+        result = merge_two_lists(list1, list2)
 
         self.assertEqual(result.val, 1)
         self.assertEqual(result.next.val, 1)
