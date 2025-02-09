@@ -4,10 +4,12 @@ from typing import Optional
 
 import unittest
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
 
 def remove_nth_from_end(head: Optional[ListNode], n: int) -> Optional[ListNode]:
     def get_length(head: Optional[ListNode]):
@@ -45,6 +47,7 @@ def remove_nth_from_end(head: Optional[ListNode], n: int) -> Optional[ListNode]:
         count += 1
 
     return head
+
 
 class Test(unittest.TestCase):
     def test_example(self):
